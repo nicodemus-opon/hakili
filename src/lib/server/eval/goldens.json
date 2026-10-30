@@ -1,0 +1,1044 @@
+{
+	"$schema": "hakili-eval-v1",
+	"retrieval": [
+		{
+			"id": "sw-dismissal",
+			"query": "mwajiri alinifuta kazi bila notisi",
+			"expectTopic": "employment",
+			"expectTerms": ["dismiss", "notice"]
+		},
+		{
+			"id": "sw-land-encroach",
+			"query": "jirani amevamia shamba langu",
+			"expectTopic": "land",
+			"expectTerms": ["encroach", "boundary"]
+		},
+		{
+			"id": "sw-succession",
+			"query": "baba amefariki bila wosia kugawa shamba",
+			"expectTopic": "succession",
+			"expectTerms": ["will", "land"]
+		},
+		{
+			"id": "en-dismissal",
+			"query": "employer dismissed me without notice",
+			"expectTopic": "employment",
+			"expectTerms": ["dismiss", "notice"]
+		},
+		{
+			"id": "en-eviction",
+			"query": "landlord wants to evict me next week",
+			"expectTopic": "housing",
+			"expectTerms": ["evict", "notice"]
+		},
+		{
+			"id": "sheng-theft",
+			"query": "beat yangu imeibiwa",
+			"expectTopic": "ip",
+			"expectTerms": ["theft", "song"]
+		},
+		{
+			"id": "sw-traffic",
+			"query": "ajali barabarani bima",
+			"expectTopic": "traffic",
+			"expectTerms": ["accident", "insurance"]
+		},
+		{
+			"id": "sw-debt",
+			"query": "mkopo sijalipa deni",
+			"note": "3-word query: debt terms must retrieve; topic vote is noise-level (top-3 scores within 4%) so no expectTopic",
+			"expectTerms": ["loan", "debt"]
+		},
+		{
+			"id": "en-will-formalities",
+			"query": "what makes a will valid signed witnesses",
+			"expectTopic": "succession",
+			"expectTerms": ["will", "witnesses"]
+		},
+		{
+			"id": "en-intestate-spouse",
+			"query": "husband died no will wife share children",
+			"expectTopic": "succession",
+			"expectTerms": ["spouse", "intestate"]
+		},
+		{
+			"id": "en-land-search",
+			"query": "official land search title deed encumbrances",
+			"expectTopic": "land",
+			"expectTerms": ["search", "title"]
+		},
+		{
+			"id": "en-beacon-boundary",
+			"query": "neighbour moved beacons boundary survey",
+			"expectTopic": "land",
+			"expectTerms": ["beacon", "boundary"]
+		},
+		{
+			"id": "en-crb-dispute",
+			"query": "wrong CRB listing dispute clearance certificate",
+			"expectTopic": "debt",
+			"expectTerms": ["CRB", "dispute"]
+		},
+		{
+			"id": "en-auction-redemption",
+			"query": "auction notice redeem property before sale",
+			"expectTopic": "debt",
+			"expectTerms": ["auction", "redeem"]
+		},
+		{
+			"id": "en-odpc-complaint",
+			"query": "company misused my personal data complain ODPC",
+			"expectTopic": "privacy",
+			"expectTerms": ["ODPC", "data"]
+		},
+		{
+			"id": "en-kra-objection",
+			"query": "KRA tax assessment objection appeal tribunal",
+			"expectTopic": "business",
+			"expectTerms": ["KRA", "objection"]
+		},
+		{
+			"id": "en-tims-transfer",
+			"query": "seller will not transfer logbook TIMS",
+			"expectTopic": "traffic",
+			"expectTerms": ["TIMS", "logbook"]
+		},
+		{
+			"id": "en-p3-assault",
+			"query": "assaulted need P3 form medical evidence",
+			"expectTopic": "criminal",
+			"expectTerms": ["P3", "assault"]
+		},
+		{
+			"id": "en-elrc-claim",
+			"query": "unfair dismissal file claim ELRC conciliation",
+			"expectTopic": "employment",
+			"expectTerms": ["ELRC", "dismissal"]
+		},
+		{
+			"id": "en-maternity-protection",
+			"query": "dismissed while pregnant maternity leave rights",
+			"expectTopic": "employment",
+			"expectTerms": ["maternity", "dismissal"]
+		},
+		{
+			"id": "en-custody-best-interests",
+			"query": "custody dispute best interests of the child",
+			"expectTopic": "family",
+			"expectTerms": ["custody", "child"]
+		},
+		{
+			"id": "en-matrimonial-property",
+			"query": "divide matrimonial property contribution divorce",
+			"expectTopic": "family",
+			"expectTerms": ["matrimonial", "contribution"]
+		},
+		{
+			"id": "en-lockout-eviction",
+			"query": "landlord locked me out changed locks",
+			"expectTopic": "housing",
+			"expectTerms": ["lockout", "evict"]
+		},
+		{
+			"id": "en-rent-tribunal",
+			"query": "rent increase dispute tribunal controlled tenancy",
+			"expectTopic": "housing",
+			"expectTerms": ["tribunal", "rent"]
+		},
+		{
+			"id": "en-counterfeit-kebs",
+			"query": "fake goods counterfeit report KEBS",
+			"expectTopic": "consumer",
+			"expectTerms": ["counterfeit", "KEBS"]
+		},
+		{
+			"id": "en-injunction",
+			"query": "urgent injunction stop demolition court order",
+			"expectTopic": "procedure",
+			"expectTerms": ["injunction", "court"]
+		},
+		{
+			"id": "en-appeal-timeline",
+			"query": "appeal conviction sentence deadline",
+			"expectTopic": "criminal",
+			"expectTerms": ["appeal", "sentence"]
+		},
+		{
+			"id": "en-trademark-kipi",
+			"query": "register trademark logo KIPI brand protection",
+			"expectTopic": "ip",
+			"expectTerms": ["trademark", "KIPI"]
+		},
+		{
+			"id": "en-split-sheet",
+			"query": "beatmaker split sheet collaboration shares",
+			"expectTopic": "ip",
+			"expectTerms": ["split", "royalt"]
+		},
+		{
+			"id": "en-sim-swap",
+			"query": "SIM swap fraud line stolen mobile money",
+			"expectTopic": "privacy",
+			"expectTerms": ["SIM", "fraud"]
+		},
+		{
+			"id": "en-shif-registration",
+			"query": "SHIF registration health cover dependants",
+			"expectTopic": "general",
+			"expectTerms": ["SHIF", "health"]
+		},
+		{
+			"id": "en-chiefs-letter",
+			"query": "chief introduction letter succession heirs list",
+			"expectTopic": "succession",
+			"expectTerms": ["chief", "heir"]
+		},
+		{
+			"id": "sw-will",
+			"query": "baba aliandika wosia mashahidi wangapi",
+			"expectTopic": "succession",
+			"expectTerms": ["will", "witness"]
+		},
+		{
+			"id": "sw-rent-arrears",
+			"query": "nina deni ya kodi mwenye nyumba anataka kunifukuza",
+			"expectTopic": "housing",
+			"expectTerms": ["rent", "evict"]
+		},
+		{
+			"id": "sw-land-buy",
+			"query": "nataka kununua shamba ninahitaji nini",
+			"expectTopic": "land",
+			"expectTerms": ["search", "title"]
+		},
+		{
+			"id": "sw-crb",
+			"query": "nimeiwekwa CRB kimakosa nataka jina liondolewe",
+			"expectTopic": "debt",
+			"expectTerms": ["CRB", "dispute"]
+		},
+		{
+			"id": "sw-privacy-otp",
+			"query": "nimetumiwa ujumbe unaomba OTP yangu",
+			"expectTopic": "privacy",
+			"expectTerms": ["OTP", "fraud"]
+		}
+	],
+	"interview": [
+		{
+			"id": "universal-first",
+			"issue": "My employer dismissed me without notice",
+			"lang": "en",
+			"history": [],
+			"mustMentionAny": ["party", "matter"],
+			"mustNotMention": ["loan"]
+		},
+		{
+			"id": "universal-second",
+			"issue": "My employer dismissed me without notice",
+			"lang": "en",
+			"history": [
+				{
+					"q": "Who is the other party in this matter?",
+					"a": "Bidii Ltd, my employer"
+				}
+			],
+			"mustMentionAny": ["when", "where", "happen"],
+			"mustNotMention": ["loan"]
+		},
+		{
+			"id": "car-logbook-universal",
+			"issue": "i bought a car from someone and they havent transferred ownership to me yet",
+			"lang": "en",
+			"history": [],
+			"mustMentionAny": ["party", "matter"],
+			"mustNotMention": ["loan"]
+		},
+		{
+			"id": "landlord-first-personalized",
+			"issue": "landlord chaing me without notice",
+			"lang": "en",
+			"history": [],
+			"mustMentionAny": ["landlord", "name"],
+			"mustNotMention": ["loan"]
+		},
+		{
+			"id": "landlord-second-advances",
+			"issue": "landlord chaing me without notice",
+			"lang": "en",
+			"history": [
+				{
+					"q": "What notice and access details do you have for the landlord's action?",
+					"a": "none"
+				}
+			],
+			"mustMentionAny": ["when", "where", "happen"],
+			"mustNotMention": ["loan", "other party"]
+		},
+		{
+			"id": "universal-sw",
+			"issue": "jirani amevamia shamba langu",
+			"lang": "sw",
+			"history": [],
+			"mustMentionAny": ["nani", "jambo"],
+			"mustNotMention": ["loan"]
+		},
+		{
+			"id": "named-party-skips",
+			"issue": "John Kamau dismissed me without notice",
+			"lang": "en",
+			"history": [],
+			"mustMentionAny": ["when", "where", "happen"],
+			"mustNotMention": ["other party", "name", "loan"]
+		}
+	],
+	"openInterview": [
+		{
+			"id": "car-no-loan",
+			"issue": "i bought a car from someone and they havent transferred ownership to me yet",
+			"question": "What is the loan amount and when was it agreed upon?",
+			"history": [],
+			"lawContext": "",
+			"expectGrounded": false,
+			"expectGeneric": true,
+			"expectSingleConcept": false
+		},
+		{
+			"id": "car-grounded",
+			"issue": "i bought a car from someone and they havent transferred ownership to me yet",
+			"question": "What sale agreement and payment proof do you have for the car?",
+			"history": [],
+			"lawContext": "",
+			"expectGrounded": true,
+			"expectGeneric": false,
+			"expectSingleConcept": true
+		},
+		{
+			"id": "outcome-vague",
+			"issue": "My employer dismissed me without notice",
+			"question": "What outcome are you hoping for?",
+			"history": [],
+			"lawContext": "",
+			"expectGrounded": false,
+			"expectGeneric": true
+		},
+		{
+			"id": "how-when-double",
+			"issue": "My employer dismissed me without notice",
+			"question": "How was the dismissal and when did it happen?",
+			"history": [],
+			"expectSingleConcept": false
+		},
+		{
+			"id": "why-what-double",
+			"issue": "My employer dismissed me without notice",
+			"question": "Why were you dismissed and what proof do you have?",
+			"history": [],
+			"expectSingleConcept": false
+		},
+		{
+			"id": "outcome-borrowed-noun",
+			"issue": "My employer dismissed me without notice",
+			"question": "What outcome do you want from your employer?",
+			"history": [],
+			"expectGrounded": true,
+			"expectGeneric": true
+		},
+		{
+			"id": "who-else-borrowed",
+			"issue": "My employer dismissed me without notice",
+			"question": "Who else is involved in your employer case?",
+			"history": [],
+			"expectGeneric": true
+		},
+		{
+			"id": "aux-double",
+			"issue": "I slipped in a supermarket and hurt my back",
+			"question": "Were you employed by a specific employer and did the slip occur during your work hours?",
+			"history": [],
+			"expectSingleConcept": false
+		},
+		{
+			"id": "aux-single",
+			"issue": "i bought a car from someone and they havent transferred ownership to me yet",
+			"question": "Did the seller sign the transfer forms?",
+			"history": [],
+			"expectSingleConcept": true
+		}
+	],
+	"liveInterview": [
+		{
+			"id": "live-car-loan-judge",
+			"issue": "i bought a car from someone and they havent transferred ownership to me yet",
+			"question": "What is the loan amount and when was it agreed upon?",
+			"history": [],
+			"lawContext": "Motor vehicle logbook transfer on NTSA TIMS: ownership passes when the seller initiates transfer and the buyer accepts. Keep sale agreement, payment proof, ID copies and TIMS receipts.",
+			"expectJudge": false
+		},
+		{
+			"id": "live-car-proof-judge",
+			"issue": "i bought a car from someone and they havent transferred ownership to me yet",
+			"question": "What sale agreement and payment proof do you have for the car?",
+			"history": [],
+			"lawContext": "Motor vehicle logbook transfer on NTSA TIMS: ownership passes when the seller initiates transfer and the buyer accepts. Keep sale agreement, payment proof, ID copies and TIMS receipts.",
+			"expectJudge": true
+		}
+	],
+	"validators": [
+		{
+			"id": "generic-rejected",
+			"kind": "generic",
+			"text": "What outcome are you hoping for?",
+			"issue": "My employer dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "specific-accepted",
+			"kind": "generic",
+			"text": "What type of employment contract did you have?",
+			"issue": "My employer dismissed me, I had a permanent contract",
+			"expected": false
+		},
+		{
+			"id": "sw-expansion",
+			"kind": "fts",
+			"query": "baba amefariki bila wosia kugawa shamba",
+			"mustContain": ["will:*", "land:*"]
+		},
+		{
+			"id": "plain-or",
+			"kind": "plainOr",
+			"query": "employer dismissed me without notice",
+			"mustContain": ["dismiss:*"]
+		},
+		{
+			"id": "thin-plan-flagged",
+			"kind": "thin",
+			"lang": "sw",
+			"planFile": "thin-sw.txt",
+			"expected": true
+		},
+		{
+			"id": "quote-supported",
+			"kind": "quote",
+			"text": "An employer must give written notice before dismissal [1].",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"expected": true
+		},
+		{
+			"id": "quote-invented-stripped",
+			"kind": "quote",
+			"text": "The moon landing was faked by your employer [1].",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"expected": false
+		},
+		{
+			"id": "quote-cross-citation-stripped",
+			"kind": "quote",
+			"text": "The seller initiates transfer on TIMS with payment proof [1].",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				},
+				{
+					"title": "Logbook transfer",
+					"citation": "NTSA TIMS",
+					"content": "Motor vehicle ownership passes when the seller initiates transfer on TIMS and the buyer accepts with sale agreement and payment proof."
+				}
+			],
+			"expected": false
+		},
+		{
+			"id": "grounding-full",
+			"kind": "grounding",
+			"text": "An employer must give written notice before dismissal [1].",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"minScore": 1
+		},
+		{
+			"id": "anchored-dated",
+			"kind": "anchored",
+			"text": "When exactly in May 2024 were you dismissed?",
+			"expected": true
+		},
+		{
+			"id": "anchored-generic",
+			"kind": "anchored",
+			"text": "Who is the other party in this matter?",
+			"expected": false
+		},
+		{
+			"id": "pack-budget",
+			"kind": "pack",
+			"budget": 120,
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "First sentence about notice periods. Second sentence about dismissal procedures and written warnings."
+				},
+				{
+					"title": "Logbook transfer",
+					"citation": "NTSA TIMS",
+					"content": "Third sentence about vehicle transfer and payment proof requirements."
+				}
+			],
+			"mustContain": ["[1] Employment Act"]
+		},
+		{
+			"id": "diversity-minority-survives",
+			"kind": "diversity",
+			"passages": [
+				{
+					"title": "e1",
+					"citation": "c1",
+					"topic": "employment",
+					"content": "dismissal notice content alpha one"
+				},
+				{
+					"title": "e2",
+					"citation": "c2",
+					"topic": "employment",
+					"content": "dismissal notice content beta two"
+				},
+				{
+					"title": "e3",
+					"citation": "c3",
+					"topic": "employment",
+					"content": "dismissal notice content gamma three"
+				},
+				{
+					"title": "l1",
+					"citation": "c4",
+					"topic": "land",
+					"content": "boundary encroachment dispute content delta"
+				}
+			],
+			"mustContain": ["boundary encroachment"]
+		},
+		{
+			"id": "safety-full-en",
+			"kind": "safety",
+			"lang": "en",
+			"expected": true,
+			"text": "## Facts\nThe client instructs dismissal without notice.\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client."
+		},
+		{
+			"id": "safety-missing-referral",
+			"kind": "safety",
+			"lang": "en",
+			"expected": false,
+			"text": "## Facts\nThe client instructs dismissal without notice.\n\n## Note\nGeneral information only."
+		},
+		{
+			"id": "safety-missing-heading",
+			"kind": "safety",
+			"lang": "en",
+			"expected": false,
+			"text": "Confirm the authorities are still current."
+		},
+		{
+			"id": "safety-full-sw",
+			"kind": "safety",
+			"lang": "sw",
+			"expected": true,
+			"text": "## Ukweli\nMteja anaeleza kufutwa kazi bila notisi.\n\n## Ujumbe\nThibitisha kwamba mamlaka bado ni za sasa kabla ya kufungua, kuwasilisha, au kushauri mteja."
+		},
+		{
+			"id": "coverage-cited-full",
+			"kind": "coverage",
+			"minScore": 1,
+			"text": "An employer must give written notice before dismissal [1].",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			]
+		},
+		{
+			"id": "coverage-uncited-factual-low",
+			"kind": "coverage",
+			"minScore": 0,
+			"maxScore": 0.5,
+			"text": "An employer must give written notice before dismissal.",
+			"passages": [
+				{
+					"title": "Logbook transfer",
+					"citation": "NTSA TIMS",
+					"content": "Motor vehicle ownership passes when the seller initiates transfer on TIMS and the buyer accepts with sale agreement and payment proof."
+				}
+			]
+		},
+		{
+			"id": "coverage-disclaimer-only",
+			"kind": "coverage",
+			"minScore": 1,
+			"text": "## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal."
+				}
+			]
+		},
+		{
+			"id": "coverage-no-passages-with-claims",
+			"kind": "coverage",
+			"minScore": 0,
+			"maxScore": 0,
+			"text": "An employer must give written notice before dismissal [1].",
+			"passages": []
+		},
+		{
+			"id": "generic-outcome-borrowed",
+			"kind": "generic",
+			"text": "What outcome do you want from your employer?",
+			"issue": "My employer dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "generic-who-else-borrowed",
+			"kind": "generic",
+			"text": "Who else is involved in your employer case?",
+			"issue": "My employer dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "generic-tell-more-borrowed",
+			"kind": "generic",
+			"text": "Tell me more about your employer dispute",
+			"issue": "My employer dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "generic-what-happened-borrowed",
+			"kind": "generic",
+			"text": "What happened with your employer?",
+			"issue": "My employer dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "vague-outcome",
+			"kind": "vagueIntent",
+			"text": "What outcome do you want?",
+			"expected": true
+		},
+		{
+			"id": "vague-specific",
+			"kind": "vagueIntent",
+			"text": "What sale agreement and payment proof do you have for the car?",
+			"expected": false
+		},
+		{
+			"id": "duplicate-paraphrase",
+			"kind": "duplicate",
+			"text": "What is the other party name?",
+			"history": [
+				{
+					"q": "Who is the other party in this matter?",
+					"a": "x"
+				}
+			],
+			"expected": true
+		},
+		{
+			"id": "duplicate-distinct",
+			"kind": "duplicate",
+			"text": "Which documents can you attach?",
+			"history": [
+				{
+					"q": "Who is the other party in this matter?",
+					"a": "x"
+				}
+			],
+			"expected": false
+		},
+		{
+			"id": "degenerate-pole",
+			"kind": "degenerate",
+			"text": "pole pole pole pole pole pole pole pole pole pole pole pole",
+			"expected": true
+		},
+		{
+			"id": "degenerate-hayajulikani",
+			"kind": "degenerate",
+			"text": "Hayajulikani. Hayajulikani. Hayajulikani. Hayajulikani. Hayajulikani.",
+			"expected": true
+		},
+		{
+			"id": "degenerate-normal",
+			"kind": "degenerate",
+			"text": "What sale agreement and payment proof do you have for the car?",
+			"expected": false
+		},
+		{
+			"id": "lang-en-in-sw",
+			"kind": "langMatch",
+			"text": "Who is the other party in this matter today?",
+			"lang": "sw",
+			"expected": false
+		},
+		{
+			"id": "lang-sw-in-en",
+			"kind": "langMatch",
+			"text": "Mwenzako ni nani katika jambo hili leo?",
+			"lang": "en",
+			"expected": false
+		},
+		{
+			"id": "lang-good-en",
+			"kind": "langMatch",
+			"text": "Who is the other party in this matter and what happened?",
+			"lang": "en",
+			"expected": true
+		},
+		{
+			"id": "lang-good-sw",
+			"kind": "langMatch",
+			"text": "Mwenzako ni nani katika jambo hili na kilichotokea?",
+			"lang": "sw",
+			"expected": true
+		},
+		{
+			"id": "named-john",
+			"kind": "namedParty",
+			"issue": "John Kamau dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "named-bidi",
+			"kind": "namedParty",
+			"issue": "Bidii Ltd dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "named-may",
+			"kind": "namedParty",
+			"issue": "I was dismissed in May without notice",
+			"expected": false
+		},
+		{
+			"id": "thin-skeleton",
+			"kind": "thinInline",
+			"text": "## Facts\nThe client instructs dismissal.\n\n## Issues\nIssues stated.\n\n## Law\nNotice required.\n\n## Next Steps\nGather bundle.\n\n## Deadlines\nCheck limitation.\n\n## Authorities\nConfirm authorities.\n\n## Risks\nState exposure.\n\n## Urgent\nAct quickly.\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"lang": "en",
+			"expected": true
+		},
+		{
+			"id": "thin-good",
+			"kind": "thinInline",
+			"text": "## Facts\nThe client instructs dismissal without notice in May and the letter is in the bundle with full particulars included here.\n\n## Issues\nWhether dismissal without notice and hearing was lawful and what remedy lies in the circumstances.\n\n## Law\nThe Employment Act requires written notice before dismissal in many cases and unfair termination has remedies available [1].\n\n## Analysis\nOn the instructions, lack of notice supports the claim while cause remains to be tested on the evidence [1].\n\n## Risks\nThe counterargument is summary dismissal for cause and limitation exposure must be verified promptly [1].\n\n## Next Steps\nBundle the contract payslips notice letter and messages about the dismissal for filing and service in order [1].\n\n## Deadlines\nVerify the thirty day deadline against the current gazette promptly today without any further delay now [1].\n\n## Authorities\nConfirm notice pay unfair termination evidence limitation forum and whether the authorities are still current before filing [1].\n\n## Urgent\nAct quickly so limitation periods do not expire on the claim and evidence stays fresh [1].\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"lang": "en",
+			"expected": false
+		},
+		{
+			"id": "quote-amount-invented",
+			"kind": "quote",
+			"text": "The employer must pay ten million shillings compensation [1].",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"expected": false
+		},
+		{
+			"id": "coverage-short-unsupported",
+			"kind": "coverage",
+			"minScore": 0,
+			"maxScore": 0,
+			"text": "Notice is required.",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			]
+		},
+		{
+			"id": "coverage-short-supported",
+			"kind": "coverage",
+			"minScore": 1,
+			"text": "Employer must give written notice.",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			]
+		},
+		{
+			"id": "quote-grounds-verbatim",
+			"kind": "quoteGrounds",
+			"text": "12 May 2025",
+			"issue": "On 12 May 2025 my landlord John Kamau locked me out of my house in Kisumu and kept my deposit",
+			"expected": true
+		},
+		{
+			"id": "quote-grounds-invented",
+			"kind": "quoteGrounds",
+			"text": "Mombasa",
+			"issue": "On 12 May 2025 my landlord John Kamau locked me out of my house in Kisumu and kept my deposit",
+			"expected": false
+		},
+		{
+			"id": "case-state-rich-issue",
+			"kind": "caseState",
+			"issue": "On 12 May 2025 my landlord John Kamau locked me out of my house in Kisumu and kept my deposit",
+			"history": [],
+			"known": [
+				{
+					"dimension": "party",
+					"evidence": "my landlord John Kamau"
+				},
+				{
+					"dimension": "when_where_proof",
+					"evidence": "12 May 2025"
+				},
+				{
+					"dimension": "docs_deadline",
+					"evidence": "the sale agreement"
+				}
+			],
+			"expectMissing": ["steps_outcome", "docs_deadline"]
+		},
+		{
+			"id": "case-state-evasion-and-question-text",
+			"kind": "caseState",
+			"issue": "dismissed without notice",
+			"history": [
+				{
+					"q": "When and where did this happen?",
+					"a": "none"
+				}
+			],
+			"known": [
+				{
+					"dimension": "when_where_proof",
+					"evidence": "When and where did this happen"
+				},
+				{
+					"dimension": "steps_outcome",
+					"evidence": "none"
+				}
+			],
+			"expectMissing": ["party", "when_where_proof", "steps_outcome", "docs_deadline"]
+		},
+		{
+			"id": "presuppose-loan-letter",
+			"kind": "presuppose",
+			"text": "What did the Logbook Loan Clearance Letter say about the car's ownership status?",
+			"issue": "i bought a car from someone and they havent transferred ownership to me yet",
+			"history": [],
+			"passages": [
+				{
+					"title": "Logbook transfer",
+					"citation": "NTSA TIMS",
+					"content": "Logbook Loan Clearance Letter proves no loan balance on transfer."
+				}
+			],
+			"expected": true
+		},
+		{
+			"id": "presuppose-user-doc-ok",
+			"kind": "presuppose",
+			"text": "What did the termination letter say?",
+			"issue": "employer dismissed me",
+			"history": [
+				{
+					"q": "What proof do you have?",
+					"a": "I have the termination letter"
+				}
+			],
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal."
+				}
+			],
+			"expected": false
+		},
+		{
+			"id": "presuppose-existential-ok",
+			"kind": "presuppose",
+			"text": "Were you given a notice of dismissal?",
+			"issue": "My employer dismissed me without notice",
+			"expected": false
+		},
+		{
+			"id": "generic-kama-hypothetical",
+			"kind": "generic",
+			"text": "Kama unapoteza matokeo, ulifanya nini?",
+			"issue": "mkopo sijalipa deni",
+			"expected": true
+		},
+		{
+			"id": "generic-if-you-hypothetical",
+			"kind": "generic",
+			"text": "If you were dismissed, what did you do?",
+			"issue": "My employer dismissed me without notice",
+			"expected": true
+		},
+		{
+			"id": "generic-kwa-mfano",
+			"kind": "generic",
+			"text": "Kwa mfano wa kazi, unapewa nafasi ya kujieleza?",
+			"issue": "mwajiri alinifuta kazi bila notisi",
+			"expected": true
+		},
+		{
+			"id": "disclaimer-weak-stripped",
+			"kind": "disclaimerStrip",
+			"lang": "en",
+			"text": "## Facts\nThe client instructs dismissal.\n\n## Note\nGeneral information only. Consult anyone.",
+			"expected": false
+		},
+		{
+			"id": "disclaimer-safe-kept",
+			"kind": "disclaimerStrip",
+			"lang": "en",
+			"text": "## Facts\nThe client instructs dismissal.\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"expected": true
+		},
+		{
+			"id": "uncited-fluent-unsupported",
+			"kind": "uncited",
+			"lang": "en",
+			"text": "## Facts\nThe moon landing was faked by the employer last Tuesday morning.\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"expected": true
+		},
+		{
+			"id": "uncited-supported-clean",
+			"kind": "uncited",
+			"lang": "en",
+			"text": "## Facts\nAn employer must give written notice before dismissal [1].\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"expected": false
+		},
+		{
+			"id": "assign-supported",
+			"kind": "assign",
+			"lang": "en",
+			"text": "## Facts\nAn employer must give written notice before dismissal.\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"expected": true
+		},
+		{
+			"id": "assign-unsupported",
+			"kind": "assign",
+			"lang": "en",
+			"text": "## Facts\nThe moon landing was faked last Tuesday morning.\n\n## Note\nConfirm the authorities are still current before filing, serving, or advising the client.",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must give written notice before dismissal, and the notice period depends on the contract terms agreed each month."
+				}
+			],
+			"expected": false
+		},
+		{
+			"id": "quote-year-in-citation",
+			"kind": "quote",
+			"text": "Under the Employment Act, 2007 an employer must give written notice before dismissal [1].",
+			"passages": [
+				{
+					"title": "Employment Act",
+					"citation": "Employment Act, 2007",
+					"content": "An employer must provide written notice of dismissal under the employment rules."
+				}
+			],
+			"expected": true
+		},
+		{
+			"id": "plan/ask-interview-valid",
+			"kind": "planValid",
+			"agent": "ask",
+			"goal": "interview",
+			"expected": true
+		},
+		{
+			"id": "plan/check-plan-valid",
+			"kind": "planValid",
+			"agent": "check",
+			"goal": "plan",
+			"expected": true
+		},
+		{
+			"id": "plan/draft-plan-valid",
+			"kind": "planValid",
+			"agent": "draft",
+			"goal": "plan",
+			"expected": true
+		},
+		{
+			"id": "plan/check-adherence",
+			"kind": "planAdherence",
+			"agent": "check",
+			"goal": "plan",
+			"expected": true
+		},
+		{
+			"id": "plan/ask-rejects-clause-tool",
+			"kind": "planAdherence",
+			"agent": "ask",
+			"goal": "plan",
+			"extraTool": "splitClauses",
+			"expected": false
+		},
+		{
+			"id": "plan/check-followup-valid",
+			"kind": "planValid",
+			"agent": "check",
+			"goal": "followup",
+			"expected": true
+		}
+	]
+}

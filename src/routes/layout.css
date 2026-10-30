@@ -1,0 +1,153 @@
+@import '@fontsource-variable/inter';
+@import 'tailwindcss';
+@import './tw-animate.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+	--font-sans:
+		'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+	--radius: 0.4625rem;
+	/* Monokai Pro Light (paper) */
+	--background: #faf4f2;
+	--foreground: #29242a;
+	--card: #ede7e5;
+	--card-foreground: #29242a;
+	--popover: #ede7e5;
+	--popover-foreground: #29242a;
+	--primary: #cc7a0a;
+	--primary-foreground: #faf4f2;
+	--secondary: #ede7e5;
+	--secondary-foreground: #29242a;
+	--muted: #ede7e5;
+	--muted-foreground: #706b6e;
+	--accent: #ede7e5;
+	--accent-foreground: #29242a;
+	--destructive: #e14775;
+	--border: #d3cdcc;
+	--input: #d3cdcc;
+	--ring: #1c8ca8;
+	--chart-1: #cc7a0a;
+	--chart-2: #269d69;
+	--chart-3: #1c8ca8;
+	--chart-4: #7058be;
+	--chart-5: #e16032;
+	--sidebar: #ede7e5;
+	--sidebar-foreground: #29242a;
+	--sidebar-primary: #cc7a0a;
+	--sidebar-primary-foreground: #faf4f2;
+	--sidebar-accent: #ede7e5;
+	--sidebar-accent-foreground: #29242a;
+	--sidebar-border: #d3cdcc;
+	--sidebar-ring: #1c8ca8;
+}
+
+.dark {
+	/* Monokai Pro (default) */
+	--background: #2d2a2e;
+	--foreground: #fcfcfa;
+	--card: #221f22;
+	--card-foreground: #fcfcfa;
+	--popover: #221f22;
+	--popover-foreground: #fcfcfa;
+	--primary: #ffd866;
+	--primary-foreground: #2d2a2e;
+	--secondary: #403e41;
+	--secondary-foreground: #fcfcfa;
+	--muted: #403e41;
+	--muted-foreground: #939293;
+	--accent: #403e41;
+	--accent-foreground: #fcfcfa;
+	--destructive: #ff6188;
+	--border: #403e41;
+	--input: #5b595c;
+	--ring: #78dce8;
+	--chart-1: #ffd866;
+	--chart-2: #a9dc76;
+	--chart-3: #78dce8;
+	--chart-4: #ab9df2;
+	--chart-5: #fc9867;
+	--sidebar: #221f22;
+	--sidebar-foreground: #fcfcfa;
+	--sidebar-primary: #ffd866;
+	--sidebar-primary-foreground: #2d2a2e;
+	--sidebar-accent: #403e41;
+	--sidebar-accent-foreground: #fcfcfa;
+	--sidebar-border: #403e41;
+	--sidebar-ring: #78dce8;
+}
+
+@theme inline {
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background font-sans text-foreground antialiased;
+	}
+	::selection {
+		background: var(--primary);
+		color: var(--primary-foreground);
+	}
+}
+
+/* Numi result gutter colors (theme-aware). */
+.numi-result-lens {
+	color: var(--muted-foreground);
+	font-style: italic;
+}
+
+.numi-result-ai {
+	color: var(--chart-2);
+	font-style: italic;
+}
+
+/* Side result gutter follows the editor scroll; its own bar stays hidden. */
+.numi-gutter {
+	font-size: 13px;
+	scrollbar-width: none;
+}
+
+.numi-gutter::-webkit-scrollbar {
+	display: none;
+}
